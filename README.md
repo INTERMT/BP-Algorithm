@@ -1,3 +1,5 @@
+# 上篇
+
 <div class="output_wrapper" id="output_wrapper_id" style="font-size: 16px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 0px; letter-spacing: 0px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">反向传播算法（Backpropagation Algorithm，简称BP算法）是深度学习的重要思想基础，对于初学者来说也是必须要掌握的基础知识！本文希望以一个清晰的脉络和详细的说明，来让读者彻底明白BP算法的原理和计算过程。</p>
 <p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">全文分为上下两篇，上篇主要介绍BP算法的原理（即公式的推导），介绍完原理之后，我们会将一些具体的数据带入一个简单的三层神经网络中，去完整的体验一遍BP算法的计算过程；下篇是一个项目实战，我们将带着读者一起亲手实现一个BP神经网络（不使用任何第三方的深度学习框架）来解决一个具体的问题。</p>
 <h1 id="h1bp" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.6em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">1. BP算法的推导</span></h1>
@@ -118,11 +120,11 @@
 <p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">通常权重<span class="katex" style="font: 1.21em/1.2 KaTeX_Main, 'Times New Roman', serif; text-indent: 0px; text-rendering: auto; font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 8px 3px;"><img src="http://qiniu.aihubs.net/FmguTcePO7AgKoD9kqfCpmeEb7mQ" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px auto; max-width: 100%; display: inline-block; vertical-align: middle;"></span>的更新会加上一个正则化项来避免过拟合，这里为了简化计算，我们省去了正则化项。上式中<span class="katex" style="font: 1.21em/1.2 KaTeX_Main, 'Times New Roman', serif; text-indent: 0px; text-rendering: auto; font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 8px 3px;"><img src="http://qiniu.aihubs.net/FjPgmKTIvtw1KBnbavv1PR3qee4k" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px auto; max-width: 100%; display: inline-block; vertical-align: middle;"></span>的是学习率，我们设其值为0.1。参数更新的计算相对简单，每一层的计算方式都相同，因此本文仅演示第一层隐藏层的参数更新：</p>
 <figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://upload-images.jianshu.io/upload_images/13056713-1845ea8fb509679c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure>
 <h1 id="h3" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.6em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">3. 小结</span></h1>
-<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">至此，我们已经完整介绍了BP算法的原理，并使用具体的数值做了计算。在下篇中，我们将带着读者一起亲手实现一个BP神经网络（不使用任何第三方的深度学习框架），敬请期待！</p></div>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">至此，我们已经完整介绍了BP算法的原理，并使用具体的数值做了计算。在下篇中，我们将带着读者一起亲手实现一个BP神经网络（不使用任何第三方的深度学习框架）。</p></div>
 
+# 下篇
 
-
-在"一文彻底搞懂BP算法：原理推导+数据演示+项目实战（上篇）"中我们详细介绍了BP算法的原理和推导过程，并且用实际的数据进行了计算演练。在下篇中，我们将自己实现BP算法（不使用第三方的算法框架），并用来解决鸢尾花分类问题。
+在上篇中我们详细介绍了BP算法的原理和推导过程，并且用实际的数据进行了计算演练。在下篇中，我们将自己实现BP算法（不使用第三方的算法框架），并用来解决鸢尾花分类问题。
 
 ![图1 鸢尾花](https://upload-images.jianshu.io/upload_images/13056713-f8db8fb1a15c3442?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
