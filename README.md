@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # 一文彻底搞懂BP算法：原理推导+数据演示+项目实战
 
 反向传播算法（Backpropagation Algorithm，简称BP算法）是深度学习的重要思想基础，对于初学者来说也是必须要掌握的基础知识！本文希望以一个清晰的脉络和详细的说明，来让读者彻底明白BP算法的原理和计算过程。
