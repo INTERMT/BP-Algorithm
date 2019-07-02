@@ -139,7 +139,7 @@
 首先我们导入需要的包：
 
 
-```
+``` python
 from csv import reader
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -151,7 +151,7 @@ import math
 
 接下来我们实现一个数据集的加载和预处理的函数`load_dataset`：
 
-```
+``` python
 def load_dataset(dataset_path, n_train_data):
     """加载数据集，对数据进行预处理，并划分训练集和验证集
     :param dataset_path: 数据集文件路径
@@ -196,7 +196,7 @@ def load_dataset(dataset_path, n_train_data):
 实现数据预处理之后，接下来我们开始实现BP算法的关键部分（**如果读者对算法原理有不清楚的地方，可以查看"一文彻底搞懂BP算法：原理推导+数据演示+项目实战（上篇）"**）。首先我们实现神经元的计算部分、激活函数以及激活函数的求导部分。
 
 
-```
+``` python
 def fun_z(weights, inputs):
     """计算神经元的输入：z = weight * inputs + b
     :param weights: 网络参数（权重矩阵和偏置项）
@@ -237,7 +237,7 @@ def sigmoid_derivative(output):
 接下来我们实现BP网络的前向传播：
 
 
-```
+``` python
 def forward_propagate(network, inputs):
     """前向传播计算
     :param network: 神经网络
@@ -258,7 +258,7 @@ def forward_propagate(network, inputs):
 前向计算的过程比较简单，和我们在上篇中介绍的计算过程一致。稍微麻烦一点的是误差反向传播的计算：
 
 
-```
+``` python
 def backward_propagate_error(network, actual_label):
     """误差进行反向传播
     :param network: 神经网络
@@ -290,7 +290,7 @@ def backward_propagate_error(network, actual_label):
 在计算得到每一层的误差项之后，我们根据上篇中介绍的权重矩阵和偏置项的更新公式来更新参数：
 
 
-```
+``` python
 def update_parameters(network, row, l_rate):
     """利用误差更新神经网络的参数（权重矩阵和偏置项）
     :param network: 神经网络
@@ -314,7 +314,7 @@ def update_parameters(network, row, l_rate):
 到这里所有的关键部分我们都已经实现了，接下来我们实现网络的初始化以及网络的训练部分，首先实现网络的初始化：
 
 
-```
+``` python
 def initialize_network(n_inputs, n_hidden, n_outputs):
     """初始化BP网络（初始化隐藏层和输出层的参数：权重矩阵和偏置项）
     :param n_inputs: 特征列数
@@ -338,7 +338,7 @@ def initialize_network(n_inputs, n_hidden, n_outputs):
 接下来我们实现模型的训练部分：
 
 
-```
+``` python
 def train(train_data, l_rate, epochs, n_hidden, val_data):
     """训练神经网络（迭代n_epoch个回合）
     :param train_data: 训练集
@@ -382,7 +382,7 @@ def train(train_data, l_rate, epochs, n_hidden, val_data):
 我们总共训练了`epochs`个回合，这里我们使用随机梯度下降来优化模型，因此每次都用一个样本来更新参数。接下来我们实现一个函数用来验证模型的效果：
 
 
-```
+``` python
 def validation(network, val_data):
     """测试模型在验证集上的效果
     :param network: 神经网络
@@ -407,7 +407,7 @@ def validation(network, val_data):
 训练过程中的每一个回合，我们都用模型对验证集进行一次预测，并将预测的结果保存，用来绘制训练过程中模型在验证集上的准确率的变化过程。准确率的计算以及使用模型进行预测的实现如下：
 
 
-```
+``` python
 def accuracy_calculation(actual_label, predicted_label):
     """计算准确率
     :param actual_label: 真实类标
@@ -435,7 +435,7 @@ def predict(network, row):
 最后我们运行代码：
 
 
-```
+``` python
 if __name__ == "__main__":
     file_path = './iris.csv'
 
